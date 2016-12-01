@@ -85,11 +85,11 @@ genotypes <- c(rep('control_t0', 3), rep('saline', 9), rep('5-FC, 9)
 
 ```R
 conD01 <- data.frame(
-  sample = rep(c('1 t=0', '2 t=0', '3 t=0, '1 t=10min car', '1 t=60min car', '1 t=4h car', '2 t=10min car', and so on and on)
+  sample = rep(c('1 t0', '2 t0', '3 t0, '1 t10min car', '1 t60min car', '1 t4h car', '2 t10min car', and so on and on)
   genotype = genotypes
   growth = rep(c(':control', ':control', ':control', ':saline', ':saline', ':saline', ':saline', and so on and on)
   treatment = rep(c(':control', ':control', ':control', ':no', ':no', ':no', ':no', and so on and on)
-  time = rep(c(':0', ':0', ':0', ':10', ':60', ':4h', and so on you get the idea by this point)
+  time = rep(c(':0', ':0', ':0', ':10', ':60', ':240', ':10', ':60', and so on you get the idea by this point)
 path = rep(c('sampleX', 'sampleY', 'sampleZ' and so on and on))
 
 conD01$path <- as.character(conD01$path)
