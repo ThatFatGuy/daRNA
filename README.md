@@ -20,7 +20,7 @@ cd /Volumes/BiochemXsan/scratch/lamontlab/jess
 
 salmon index -t PAO1genes.fna -i PAO1index
 
-salmon quant -p 20 -i PAO1index -l A -1 sample_X_forward.fq.gz -2 sample_X_reverse.fq.gz -o sampleXquant --numBootstraps 100
+salmon quant -p 20 -i PAO1index -l A -1 trimomatic/C7N92ANXX-1235-07-21-1_L007_R1_Trim.gz -2 trimomatic/C7N92ANXX-1235-07-21-1_L007_R2_Trim.gz -o sampleXquant --numBootstraps 100
 
 ```
 >**The above code - 1) will move you to the directory containing the file you downloaded from pseudomonas.com (provided you moved it to your folder on scratch) 2) indexes the file from pseudomonas.com - this puts it into another folder, make sure when you do step three you DONT write -t PAO1index/ make sure its -t PAO1index  3) this is taking sample X raw reads (trimmed) and is using the entire server to map it across and count it in about 3mins (with 100 bootstraps).**
